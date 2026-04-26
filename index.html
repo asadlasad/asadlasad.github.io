@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asad L. Asad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#top" class="nav-name">Asad L. Asad</a>
+  <div class="nav-links">
+    <a href="#top">Home</a>
+    <a href="#biography">Biography</a>
+    <a href="#research">Research</a>
+    <a href="#books">Book</a>
+    <a href="#articles">Articles</a>
+  </div>
+  <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<header id="top">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Asad L. Asad</h1>
+      <p class="role">Associate Professor of Sociology<br>Stanford University</p>
+      <p class="statement">
+        Bridging the sociology of immigration, race/ethnicity, law, and health,
+        Asad's scholarship advances theoretical explanations and empirical evidence for
+        how institutional categories relate to social control and inequality. His multi-method work focuses on the U.S.
+        immigration system and its disproportionate effects on Latino citizens and
+        noncitizens.
+      </p>
+      <div class="hero-actions">
+        <a href="https://drive.google.com/file/d/1cpbRdsa8zVbPiQJDPzQbs2TM1HtOVMei/view" class="btn">Curriculum Vitae</a>
+        <a href="https://scholar.google.com/citations?user=ZVfJdNQAAAAJ&amp;hl=en" class="btn btn-ghost">Google Scholar</a>
+        <a href="mailto:asadasad@stanford.edu" class="btn btn-ghost">Contact</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="headshot.jpg" alt="Asad L. Asad">
+    </div>
+  </div>
+</header>
+
+<!-- BIOGRAPHY -->
+<section id="biography">
+  <div class="section-inner">
+    <div class="section-label">Biography</div>
+    <div class="bio-prose">
+      <p>
+        Asad L. Asad is Associate Professor of Sociology at Stanford University, where
+        he is a faculty affiliate of the Center for Comparative Studies in Race and
+        Ethnicity. Bridging the sociology of immigration, race/ethnicity, law, and
+        health, his research examines how institutional categories relate to social
+        control and inequality. His multi-method work focuses on the U.S. immigration
+        system and its disproportionate effects on Latino citizens and noncitizens.
+        Current research
+        projects examine the effects of immigration enforcement on health, the federal
+        judiciary's role in immigration enforcement, and the capacity of
+        immigrant-serving organizations to transform the U.S. immigration system.
+      </p>
+    </div>
+    <div class="bio-prose bio-more" id="bio-more" hidden>
+      <p>
+        He is the author of the award-winning book <em>Engage and Evade: How Latino
+        Immigrant Families Manage Surveillance in Everyday Life</em> (Princeton
+        University Press, 2023). His articles appear in the
+        <em>Proceedings of the National Academy of Sciences</em>,
+        <em>Law &amp; Society Review</em>, <em>International Migration Review</em>,
+        and <em>Social Science &amp; Medicine</em>, among other outlets. His work
+        has been supported by the National Science Foundation and the Russell Sage
+        Foundation.
+      </p>
+      <p>
+        Asad teaches undergraduate and graduate courses on race, ethnicity, and
+        immigration, as well as an undergraduate course on research design and
+        preparation. He is the recipient of the Stanford School of Humanities and
+        Sciences Dean's Teaching Award, the CCSRE Faculty Recognition Award, and
+        the Mellon Mays Undergraduate Fellows Faculty Mentor Book Award.
+      </p>
+      <p>
+        Asad earned his B.A. in Political Science and Spanish Language and Culture
+        from the University of Wisconsin, and his A.M. and Ph.D. in Sociology from
+        Harvard University.
+      </p>
+    </div>
+    <button class="bio-toggle" id="bio-toggle" aria-controls="bio-more" aria-expanded="false">Read more</button>
+    <script>
+      (function () {
+        var btn = document.getElementById('bio-toggle');
+        var more = document.getElementById('bio-more');
+        btn.addEventListener('click', function () {
+          var opening = more.hasAttribute('hidden');
+          if (opening) {
+            more.removeAttribute('hidden');
+            btn.textContent = 'Read less';
+            btn.setAttribute('aria-expanded', 'true');
+            btn.classList.add('open');
+          } else {
+            more.setAttribute('hidden', '');
+            btn.textContent = 'Read more';
+            btn.setAttribute('aria-expanded', 'false');
+            btn.classList.remove('open');
+          }
+        });
+      })();
+    </script>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="section-inner">
+    <div class="section-label">Research</div>
+    <p class="section-lead">
+      Three interconnected lines of inquiry on how the U.S. immigration system
+      produces social control and inequality &mdash; and what happens when institutions
+      try to change it.
+    </p>
+
+    <details class="collapsible project">
+      <summary class="collapsible-toggle"><h2>Surveillance &amp; System Involvement</h2></summary>
+      <p class="project-desc">
+        Since the mid-2000s, the federal government has embedded immigration
+        enforcement within institutions like healthcare, education, and the labor
+        market. Surveillance theories suggest that undocumented immigrants will
+        avoid these institutions to prevent creating records that law enforcement
+        can use to apprehend them. Yet most undocumented immigrants have lived in
+        the U.S. for over a decade and regularly interact with these institutions.
+        Asad's work shows that institutional categories' relationship with social
+        control is situational, shaped by the contexts &mdash; cities, states, and time
+        periods &mdash; in which they operate.
+      </p>
+    </details>
+
+    <details class="collapsible project">
+      <summary class="collapsible-toggle"><h2>Immigration Enforcement &amp; Health</h2></summary>
+      <p class="project-desc">
+        Standard proxies of social control &mdash; such as policies and enforcement
+        actions &mdash; do not always predict Latino citizens' and noncitizens' health.
+        Asad argues that <em>salience</em>, or at-risk populations' collective awareness
+        of the threat of state sanction, helps explain this disconnect. Using public-
+        and private-access Google Trends data to measure salience, he shows that
+        salience &mdash; directly, and indirectly via policies and actions &mdash; shapes
+        health outcomes in a racially stratified system, from psychological distress
+        to infant birthweight.
+      </p>
+    </details>
+
+    <details class="collapsible project">
+      <summary class="collapsible-toggle"><h2>Systems Change &amp; Inequality</h2></summary>
+      <p class="project-desc">
+        Why does the immigration system's capacity for social control persist even
+        after legal or policy reform? Across projects on international migration to
+        the United States, federal and immigration judges' enforcement decisions, and
+        advocates' efforts to challenge the system or mitigate its harms for
+        immigrant families, this line of inquiry investigates the structural features
+        that make control durable. Using multiple methods, he shows how reforms often
+        reproduce control because they leave intact the very system they aim to change.
+      </p>
+    </details>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications" class="book-section">
+  <div class="section-inner">
+    <div class="section-label">Publications</div>
+
+    <h2 class="pub-group-heading" id="books">Book</h2>
+
+    <!-- Book: Engage and Evade -->
+    <div class="book-layout">
+      <div class="book-cover">
+        <img src="book-cover.jpg" alt="Engage and Evade">
+        <div class="book-links">
+          <a href="https://press.princeton.edu/books/hardcover/9780691182285/engage-and-evade" class="btn">Princeton University Press</a>
+          <a href="https://bookshop.org/p/books/engage-and-evade-how-latino-immigrant-families-manage-surveillance-in-everyday-life-asad-asad/aeb72e7e96b647d9?ean=9780691182285&amp;next=t&amp;" class="btn btn-ghost">Bookshop.org</a>
+        </div>
+      </div>
+      <div class="book-info">
+        <details class="collapsible" id="book-details">
+          <summary class="collapsible-toggle">
+            <h2>Engage and Evade</h2>
+            <p class="book-subtitle">How Latino Immigrant Families Manage Surveillance in Everyday Life</p>
+            <p class="book-publisher">Princeton University Press, 2023</p>
+          </summary>
+          <p class="book-desc">
+            How do undocumented immigrants navigate institutional involvement despite
+            the constraints of their status as noncitizens? Drawing on repeated interviews
+            over five years with Latino immigrant families in Dallas, ethnography of
+            Dallas Immigration Court, and analyses of the American Time Use Survey, Asad
+            theorizes &ldquo;selective engagement&rdquo; to explain how immigrants balance institutional
+            risks and rewards. Rather than avoid institutions, undocumented immigrants
+            modulate their interactions based on the situational demands of their multiple
+            social roles. They minimize negative interactions and maximize positive ones
+            that might signal moral worth &mdash; hoping that selective engagement will one day
+            demonstrate to immigration officials that they deserve citizenship. Yet court
+            observations show that, absent opportunities from the federal government,
+            selective engagement is unlikely to secure it. The book reveals that surveillance
+            operates both through the threat of exclusion and the promise of inclusion.
+          </p>
+          <div class="book-awards">
+            <h3>Awards &amp; Distinctions</h3>
+            <p>C. Wright Mills Award, Society for the Study of Social Problems</p>
+            <p>Mirra Komarovsky Book Award, Eastern Sociological Society</p>
+            <p>Distinguished Book Award, Pacific Sociological Association</p>
+            <p>Distinguished Book Award, Sociology of Law Section, American Sociological Association</p>
+            <p>Distinguished Book Award, Latina/o Sociology Section, ASA</p>
+            <p>Edwin H. Sutherland Book Award, Law and Society Division, SSSP</p>
+            <p>Robert J. Bursik Junior Scholar Award, Communities and Place Division, American Society of Criminology</p>
+            <p>Best Book in Current Events (Gold Medal), Independent Publishers Book Awards</p>
+            <p>Best First Book&ndash;Non-Fiction (Silver Medal), Independent Publishers Book Awards</p>
+            <p>Victor Villaseñor Best Latino Focused Nonfiction Book (Bronze Medal), International Latino Book Awards</p>
+            <p>Raúl Yzaguirre Best Political/Current Affairs Book (Bronze Medal), International Latino Book Awards</p>
+            <p>Herbert Jacob Book Prize (Honorable Mention), Law and Society Association</p>
+            <p>Otis Dudley Duncan Book Award (Honorable Mention), Population Section, ASA</p>
+            <p>Thomas and Znaniecki Book Award (Honorable Mention), International Migration Section, ASA</p>
+            <p>Charles Taylor Book Award (Honorable Mention), Interpretive Methodologies and Methods Section, American Political Science Association</p>
+            <p>Order of the Coif Book Award (Finalist), The Order of the Coif</p>
+            <p>Foreword INDIES Best Book in Political and Social Sciences (Finalist)</p>
+          </div>
+        </details>
+        <div id="book-quotes-slot-inline">
+          <div class="book-quotes book-quotes--inline" id="book-quotes" aria-label="Reviews of Engage and Evade">
+            <blockquote class="book-quote">
+              <p class="quote-text" id="quote-text"></p>
+              <cite class="quote-attr" id="quote-attr"></cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="book-quotes-slot-below"></div>
+    <script>
+      (function () {
+        var quotes = [
+          { text: 'In <em>Engage and Evade</em>, Asad shows us how to treat a community with humanity. This book is the best book about immigration that I have ever read. The amount of empathy Asad shows the people he writes about is what I hope for in my own writing, for my own life. <em>Engage and Evade</em> should be mandatory reading for everyone.', attr: 'Javier Zamora, author of <em>Solito</em>' },
+          { text: 'Masterful and compelling. This informative book will not only invoke anger at the unjust policies targeting immigrant communities, it will move you to speak up. Blending brilliant research with personal testimony from Latino families, Asad has given a gift to the immigrant rights movement and beyond.', attr: 'Linda Sarsour, cofounder of Women&rsquo;s March and MPower Change' },
+          { text: '<em>Engage and Evade</em> offers a definitive microsociology of undocumented life in the United States, expertly detailing the complex ballet of institutional engagement and evasion that undocumented parents must undertake in response to the mixed signals emanating from America&rsquo;s surveillance state to ensure a viable future for their US-born citizen children.', attr: 'Douglas S. Massey, Princeton University' },
+          { text: '<em>Engage and Evade</em> blends meticulous research, a keen sociological eye, and engaging writing to reveal how immigrant families perceive their myriad routine yet complex interactions with the institutions that surveil them. A splendid work of scholarship, this invaluable book shows us how to see state institutions as immigrants do.', attr: 'Cecilia Menj&iacute;var, University of California, Los Angeles' },
+          { text: 'A remarkable contribution to the study of contemporary migration, <em>Engage and Evade</em> shows how difficult it is for today&rsquo;s migrants to experience membership when the very institutions that aid in assisting and integrating newcomers are also part of a complex web of surveillance and punishment. Theoretically nuanced and compellingly argued, this important book sheds new light on one of the most vexing issues in immigration studies today. A must-read.', attr: 'Roberto G. Gonzales, author of <em>Lives in Limbo: Undocumented and Coming of Age in America</em>' },
+          { text: '<em>Engage and Evade</em> is a terrific book that shows how undocumented immigrants carefully consider their many interactions with the authorities who surveil them each day. With clear and accessible writing, Asad beautifully illustrates the competing ambiguities and pressures of life as an undocumented immigrant striving to belong in the United States.', attr: 'Amada Armenta, author of <em>Protect, Serve, and Deport: The Rise of Policing as Immigration Enforcement</em>' },
+          { text: '<em>Engage and Evade</em> is a captivating sociological study that explodes the myth that unauthorized immigrants live in the shadows. Asad&rsquo;s research deftly examines the ways in which those without formal immigration status nevertheless participate extensively in their communities, selectively engaging with authorities to build a better life here.', attr: 'Aaron Reichlin-Melnick, policy director at the American Immigration Council' },
+          { text: '<em>Engage and Evade</em> is a remarkable book both for its subject matter and for the scope and depth of the research. The writing is approachable and compelling. . . . [I]n a moment of contentious politics related to immigration, Asad offers a complex portrait of daily life for undocumented immigrants and their families, making the book crucial reading for both sociologists and the general public.', attr: 'Edelina Burciaga, <em>American Journal of Sociology</em>' },
+          { text: '<em>Engage and Evade</em> is a beautifully written study . . . [and] an incredible contribution to scholarship on immigration and surveillance as it provides the nuance and complexity of the ways people who live in fear of surveillance are forced to navigate it.', attr: 'Saher Selod, <em>Contemporary Sociology</em>' },
+          { text: '<em>Engage and Evade</em>, a thought-provoking study of how undocumented immigrants contend with surveillance, sheds light on why the vast majority of undocumented immigrants follow the law: they were also law-abiding in their home countries and now seek social inclusion in the United States, where they are making a life for their families. . . . <em>Engage and Evade</em> is sociology at its finest.', attr: 'Richard Mora, <em>Sociology of Race and Ethnicity</em>' },
+          { text: 'A provocative intervention that challenges the popular and scholarly understandings of institutional surveillance on undocumented immigrants. . . . valuable, nuanced, and insightful. . . . This important book will surely support the societal inclusion of undocumented immigrants by illuminating and interfering in the inequalities of laws and policies.', attr: 'Oscar R. Cornejo Casares, <em>Law &amp; Society Review</em>' },
+          { text: '<em>Engage and Evade</em> is an interdisciplinary study at the intersection of sociology, political science and law, which makes a significant contribution to the fields of migration and surveillance studies. . . . Anyone interested in crime, law and deviance and surveillance and punishment should definitely add this book to their reading list.', attr: 'P. Arun, <em>International Migration Review</em>' },
+          { text: 'Asad challenges the conventional notion that undocumented immigrants in the United States hide in the shadows, fearful of all forms of institutional authority. Rather, he persuasively argues, many engage selectively and rationally with both law enforcement and service institutions such as schools, hospitals and health clinics, and organizations that provide social assistance.', attr: 'Richard Feinberg, <em>Foreign Affairs</em>' },
+          { text: 'Beyond portraying immigrants in the workplace as workers or households as parents alone, Asad explores what it means to be wholly human . . . In [<em>Engage and Evade</em>], it is beautiful to see immigrants&rsquo; subjectivities centralized in the analysis of their everyday decisions and behaviors related to institutional interactions. . . . [A] must-read.', attr: 'Stephanie Canizales, <em>Social Forces</em>' },
+          { text: 'Asad L. Asad makes a thought-provoking scholarly intervention that challenges what scholars and researchers know about surveillance as it relates to undocumented immigrants. . . . [A]ccessible, well structured, and theoretically rich.', attr: 'Yalidy Matos, <em>Perspectives on Politics</em>' },
+          { text: 'Asad strikes a remarkable balance between engaging with high-level sociological theory, using rigorous empirical research methods, and highlighting the voices and humanity of his study participants to provide a nuanced and realistic account of how Latina/o immigrant parents actively and selectively engage with and evade institutional surveillance. . . . I cannot recommend this book enough.', attr: 'Daniel E. Martinez, <em>Theoretical Criminology</em>' },
+          { text: 'Asad provides a reminder of what is at stake. His contributions are not just in expanding the theory behind how we understand surveillance and the ways in which people selectively engage with it, but perhaps more importantly, in showcasing the stories of the communities most impacted by the current nativist regimes. <em>Engage and Evade</em> ought to be required reading for those hoping to understand immigration this decade, and thankfully, it is quite an enjoyable read at that.', attr: 'Saifeldeen Zihiri, <em>Surveillance &amp; Society</em>' },
+          { text: 'In a time of increasing suppression of Latino immigrants, Asad has brought forth a study that reminds us that migrant life is never merely about evasion. It is also about the hope to engage, stay, and flourish.', attr: 'Allison S&aacute;enz, <em>Journal of American Ethnic History</em>' }
+        ];
+        var textEl = document.getElementById('quote-text');
+        var attrEl = document.getElementById('quote-attr');
+        var box = document.querySelector('.book-quote');
+        var rotator = document.getElementById('book-quotes');
+        var details = document.getElementById('book-details');
+        var inlineSlot = document.getElementById('book-quotes-slot-inline');
+        var belowSlot = document.getElementById('book-quotes-slot-below');
+        details.addEventListener('toggle', function () {
+          if (details.open) {
+            belowSlot.appendChild(rotator);
+            rotator.classList.remove('book-quotes--inline');
+          } else {
+            inlineSlot.appendChild(rotator);
+            rotator.classList.add('book-quotes--inline');
+          }
+        });
+        var idx = 0;
+        function render() {
+          textEl.innerHTML = '&ldquo;' + quotes[idx].text + '&rdquo;';
+          attrEl.innerHTML = '&mdash; ' + quotes[idx].attr;
+        }
+        render();
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!reduce) {
+          setInterval(function () {
+            box.classList.add('fading');
+            setTimeout(function () {
+              idx = (idx + 1) % quotes.length;
+              render();
+              box.classList.remove('fading');
+            }, 500);
+          }, 9000);
+        }
+      })();
+    </script>
+
+    <h2 class="pub-group-heading" id="articles" style="margin-top: 5rem;">Articles &amp; Chapters</h2>
+
+    <div class="pub-list pub-list-flat" id="articles-list">
+      <div class="pub">
+        <span class="pub-title">A Framework for Bridging Conventional and Critical Perspectives on Immigrant Assimilation</span>
+        <span class="pub-venue">With Nima Dahir. Ethnic and Racial Studies, forthcoming</span>
+      </div>
+      <div class="pub">
+        <span class="pub-title">Weather Extremes in Indigenous Communities in Mexico and Undocumented U.S. Migration and Its Duration</span>
+        <span class="pub-venue">With Filiz Garip and Jackelyn Hwang. RSF: The Russell Sage Foundation Journal of the Social Sciences, forthcoming</span>
+      </div>
+      <div class="pub">
+        <a class="pub-link" href="https://www.pnas.org/doi/full/10.1073/pnas.2510928123"><span class="pub-title">Reconsideration of Secure Communities Rollout Reveals Preemptive Local&ndash;Federal Cooperation in Immigration Enforcement</span></a>
+        <span class="pub-venue">With César Vargas Núñez, Sakshina Bhatt, Basil F. Seif, Fernando S. Mendoza, and David D. Laitin. PNAS 123(15), 2026 (senior author)</span>
+      </div>
+      <div class="pub">
+        <a class="pub-link" href="https://www.cambridge.org/core/journals/law-and-society-review/article/spatial-and-temporal-contexts-of-formal-social-control-and-system-involvement-us-latinos-under-immigration-policing/E3F581920236F5EC1CE2B902E101CB8B"><span class="pub-title">Spatial and Temporal Contexts of Formal Social Control and System Involvement: U.S. Latinos under Immigration Policing</span></a>
+        <span class="pub-venue">With Livia Baer-Bositis. Law &amp; Society Review 59(1), 2025</span>
+      </div>
+      <div class="pub">
+        <a class="pub-link" href="https://www.pnas.org/doi/10.1073/pnas.2306554121"><span class="pub-title">Deportation Threat Predicts Latino U.S. Citizens and Noncitizens' Psychological Distress, 2011&ndash;2018</span></a>
+        <span class="pub-venue">With Amy L. Johnson, Christopher Levesque, and Neil A. Lewis, Jr. PNAS 121(9), 2024 (senior author)</span>
+        <span class="pub-award">Best Publication Award, Mental Health Section, ASA; IPUMS Health Surveys Best Published Research Award</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://link.springer.com/chapter/10.1007/978-3-031-66679-7_5"><span class="pub-title">Parenthood Matters: The Institutional Surveillance of U.S. Latinos by Citizenship and Parental Status</span></a>
+        <span class="pub-venue">In Immigration Policy and Immigrant Families, eds. Jennifer van Hook and Valarie King. Springer, 2024, pp. 109&ndash;129</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://www.cambridge.org/core/journals/law-and-society-review/article/abs/on-the-radar-system-embeddedness-and-latin-american-immigrants-perceived-risk-of-deportation/8858E878537C3531608613D4B4CAA6FD"><span class="pub-title">On the Radar: System Embeddedness and Latin American Immigrants' Perceived Risk of Deportation</span></a>
+        <span class="pub-venue">Law &amp; Society Review 54(1), 2020</span>
+        <span class="pub-award">Top Cited Article in Law &amp; Society Review, 2020 &amp; 2021</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://www.pnas.org/doi/abs/10.1073/pnas.1915460117"><span class="pub-title">Latinos' Deportation Fears by Citizenship and Legal Status, 2007&ndash;2018</span></a>
+        <span class="pub-venue">Proceedings of the National Academy of Sciences 117(16), 2020</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://www.tandfonline.com/doi/full/10.1080/1369183X.2018.1532787"><span class="pub-title">Hiding within Racial Hierarchies: How Undocumented Immigrants Make Residential Decisions in an American City</span></a>
+        <span class="pub-venue">With Eva Rosen. Journal of Ethnic and Migration Studies 45(11), 2019</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://journals.sagepub.com/doi/full/10.1177/0002764219835267"><span class="pub-title">Deportation Decisions: Judicial Decision-Making in an American Immigration Court</span></a>
+        <span class="pub-venue">American Behavioral Scientist 63(9), 2019</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://journals.sagepub.com/doi/abs/10.1177/0197918318801059"><span class="pub-title">Indigenous Places and the Making of Undocumented Status in Mexico&ndash;U.S. Migration</span></a>
+        <span class="pub-venue">With Jackelyn Hwang. International Migration Review 53(4), 2019</span>
+        <span class="pub-award">Louis Wirth Best Article Award, International Migration Section, ASA</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://journals.sagepub.com/doi/abs/10.1177/0002716219848342"><span class="pub-title">Migration to the United States from Indigenous Communities in Mexico</span></a>
+        <span class="pub-venue">With Jackelyn Hwang. The ANNALS of the American Academy of Political and Social Science 684, 2019</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0277953617301508"><span class="pub-title">Racialized Legal Status as a Social Determinant of Health</span></a>
+        <span class="pub-venue">With Matthew Clair. Social Science &amp; Medicine 199, 2018 (Lead Article)</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://journals.sagepub.com/doi/abs/10.1177/0002716219847148"><span class="pub-title">Mexico&ndash;U.S. Migration in Time: From Economic to Social Mechanisms</span></a>
+        <span class="pub-venue">With Filiz Garip. The ANNALS of the American Academy of Political and Social Science 684, 2019</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://psycnet.apa.org/fulltext/2016-59426-001.html"><span class="pub-title">Association of Post-Traumatic Stress Disorder Symptoms with Migraine and Headache after a Natural Disaster</span></a>
+        <span class="pub-venue">With Mariana Arcaya, Sarah R. Lowe, S.V. Subramanian, Mary C. Waters, and Jean E. Rhodes. Health Psychology 36(5), 2017 (Lead Article)</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://journals.sagepub.com/doi/10.1177/0002764216643131"><span class="pub-title">Network Effects in Mexico&ndash;U.S. Migration: Disentangling the Underlying Social Mechanisms</span></a>
+        <span class="pub-venue">With Filiz Garip. American Behavioral Scientist 60(10), 2016</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0277953615301180"><span class="pub-title">Toward a Multidimensional Understanding of Culture for Health Interventions</span></a>
+        <span class="pub-venue">With Tamara Kay. Social Science &amp; Medicine 144, 2015</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://onlinelibrary.wiley.com/doi/full/10.1002/9781118900772.etrds0220"><span class="pub-title">Migrant Networks</span></a>
+        <span class="pub-venue">With Filiz Garip. In Emerging Trends in the Social and Behavioral Sciences, eds. Robert Scott and Stephen Kosslyn. Wiley, 2015, pp. 1&ndash;13</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://link.springer.com/article/10.1007/s11111-014-0221-4"><span class="pub-title">Contexts of Reception, Post-Disaster Migration, and Socioeconomic Mobility</span></a>
+        <span class="pub-venue">Population and Environment 36(3), 2015</span>
+        <span class="pub-award">Marvin E. Olsen Student Paper Award, Section on Environment and Technology, ASA</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0277953614002834"><span class="pub-title">Theorizing the Relationship between NGOs and the State in Medical Humanitarian Development Projects</span></a>
+        <span class="pub-venue">With Tamara Kay. Social Science &amp; Medicine 120, 2014</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://www.annualreviews.org/content/journals/10.1146/annurev-soc-071811-145449"><span class="pub-title">Immigrants and African Americans</span></a>
+        <span class="pub-venue">With Mary C. Waters and Philip Kasinitz. Annual Review of Sociology 40, 2014</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0277953614000689"><span class="pub-title">Who Donates Their Bodies to Science? The Combined Role of Gender and Migration Status among California Whole-Body Donors</span></a>
+        <span class="pub-venue">With Michel Anteby and Filiz Garip. Social Science &amp; Medicine 106, 2014</span>
+      </div>
+      <div class="pub pub-hidden">
+        <a class="pub-link" href="https://link.springer.com/article/10.1007/s11133-013-9269-1"><span class="pub-title">Winning to Learn, Learning to Win: Evaluative Frames and Practices in Urban Debate</span></a>
+        <span class="pub-venue">With Monica C. Bell. Qualitative Sociology 37(1), 2014 (Lead Article)</span>
+      </div>
+    </div>
+    <div class="pub-toggles">
+      <button class="pub-toggle" id="pub-more">See more</button>
+      <button class="pub-toggle" id="pub-fewer" style="display: none;">See fewer</button>
+    </div>
+    <script>
+      (function () {
+        var hidden = document.querySelectorAll('#articles-list .pub-hidden');
+        var moreBtn = document.getElementById('pub-more');
+        var fewerBtn = document.getElementById('pub-fewer');
+        var STEP = 5;
+        var shown = 0;
+        function render() {
+          for (var i = 0; i < hidden.length; i++) {
+            hidden[i].style.display = i < shown ? 'flex' : 'none';
+          }
+          moreBtn.style.display = shown < hidden.length ? 'inline-block' : 'none';
+          fewerBtn.style.display = shown > 0 ? 'inline-block' : 'none';
+        }
+        moreBtn.addEventListener('click', function () {
+          shown = Math.min(shown + STEP, hidden.length);
+          render();
+        });
+        fewerBtn.addEventListener('click', function () {
+          shown = Math.max(shown - STEP, 0);
+          render();
+        });
+      })();
+    </script>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="section-inner">
+    <div class="footer-content">
+      <div>
+        <p class="footer-name">Asad L. Asad</p>
+        <p>Department of Sociology, Stanford University</p>
+        <p>450 Jane Stanford Way, Building 120</p>
+        <p>Stanford, CA 94305</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:asadasad@stanford.edu">Email</a>
+        <a href="https://scholar.google.com/citations?user=ZVfJdNQAAAAJ&amp;hl=en">Google Scholar</a>
+        <a href="https://drive.google.com/file/d/1cpbRdsa8zVbPiQJDPzQbs2TM1HtOVMei/view">CV</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
