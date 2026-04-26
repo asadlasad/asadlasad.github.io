@@ -224,7 +224,7 @@ header {
   width: 360px;
   height: 240px;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 70%;
   border-radius: 4px;
   filter: grayscale(15%);
   background: var(--bg-elevated);
