@@ -221,10 +221,10 @@ header {
 }
 
 .hero-image img {
-  width: 240px;
-  height: 300px;
+  width: 360px;
+  height: 240px;
   object-fit: cover;
-  object-position: 92% center;
+  object-position: center center;
   border-radius: 4px;
   filter: grayscale(15%);
   background: var(--bg-elevated);
@@ -734,8 +734,8 @@ footer p {
 
   .hero-image { order: -1; }
   .hero-image img {
-    width: 160px;
-    height: 200px;
+    width: 240px;
+    height: 160px;
   }
 
   .book-layout {
